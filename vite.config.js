@@ -8,13 +8,16 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "@/styles/media-queries.scss"; @import "@/styles/variables.scss";`
+        additionalData: `
+          @use "@/styles/variables" as *;
+          @use "@/styles/media-queries" as *;
+        `
       }
     }
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
+      '@': '/src',
     }
   }
 })

@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "media-queries" as *;
 
 // all Container widths
 $containerWidth: (
